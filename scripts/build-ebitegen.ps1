@@ -1,0 +1,1 @@
+go build -o bin/ebitegen.exe ./cmd/utils/ebitegen/
