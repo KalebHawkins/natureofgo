@@ -45,7 +45,7 @@ func (s *Slider) Update(mx, my int, mousePressed bool) {
 func (s *Slider) Draw(dst *ebiten.Image) {
 	_, th := text.Measure(s.Label, FontFace, FontSize)
 	top := &text.DrawOptions{}
-	top.GeoM.Translate(s.X+s.Width+FontSize, s.Y-th/2)
+	top.GeoM.Translate(s.X+s.Width+4, s.Y-th/2)
 	top.ColorScale.ScaleWithColor(s.Color)
 
 	text.Draw(dst, s.Label, FontFace, top)
