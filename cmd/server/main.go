@@ -15,7 +15,6 @@ func main() {
 
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
 		tmpl := web.Must(web.ParseTemplate(web.TemplateFS, "templates/index.gtpl"))
-
 		tmpl.Execute(w, data)
 	})
 
