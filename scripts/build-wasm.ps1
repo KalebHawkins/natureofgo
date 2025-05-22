@@ -12,6 +12,7 @@ go build -o web/static/Example0.5.wasm ./Example0.5/
 go build -o web/static/Exercise0.6.wasm ./Exercise0.6/
 go build -o web/static/Example0.6.wasm ./Example0.6/
 go build -o web/static/Exercise0.7.wasm ./Exercise0.7/
+go build -o web/static/Exercise0.8.wasm ./Exercise0.8/
 
 Remove-Item Env:GOOS
 Remove-Item Env:GOARCH

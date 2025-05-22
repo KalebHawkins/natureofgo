@@ -67,5 +67,10 @@ var data = PageData{
 			WasmFile:    "exercise0.7.wasm",
 			Description: "This is a random walker using perlin noise as its step direction and step size.",
 		},
+		{
+			Title:       "2D Perlin Noise",
+			WasmFile:    "exercise0.8.wasm",
+			Description: "An example of 2d Perlin Noise. Each pixel's red, green, and blue value is provided by their own noise.",
+		},
 	},
 }
