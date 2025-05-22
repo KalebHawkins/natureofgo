@@ -47,5 +47,10 @@ var data = PageData{
 			WasmFile:    "exercise0.5.wasm",
 			Description: "A random walker where the walker's step size is determined by normal distribution of random numbers.",
 		},
+		{
+			Title:       "An Accept Reject Distribution",
+			WasmFile:    "example0.5.wasm",
+			Description: "Visual representation of a custom distribution of random numbers.",
+		},
 	},
 }
