@@ -42,5 +42,10 @@ var data = PageData{
 			WasmFile:    "exercise0.4.wasm",
 			Description: "A simulation of paint splatter.",
 		},
+		{
+			Title:       "A Gaussian Walker",
+			WasmFile:    "exercise0.5.wasm",
+			Description: "A random walker where the walker's step size is determined by normal distribution of random numbers.",
+		},
 	},
 }
