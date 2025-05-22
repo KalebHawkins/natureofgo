@@ -8,7 +8,7 @@ import (
 
 	"github.com/Kalebhawkins/natureofgo/ui"
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/hajimehoshi/ebiten/v2/ebitenutil"
+	"github.com/hajimehoshi/ebiten/v2/text/v2"
 	"github.com/hajimehoshi/ebiten/v2/vector"
 )
 
@@ -51,7 +51,11 @@ func (g *Game) Draw(screen *ebiten.Image) {
 
 	g.meanSlider.Draw(screen)
 	g.standardDeviationSlider.Draw(screen)
-	ebitenutil.DebugPrint(screen, fmt.Sprintf("Mean: %.2f\nStandard Deviation: %.2f\n", g.mean, g.standardDeviation))
+
+	txtop := &text.DrawOptions{}
+	txtop.ColorScale.ScaleWithColor(color.Black)
+	txtop.LineSpacing = 14
+	text.Draw(screen, fmt.Sprintf("Mean: %.2f\nStandard Deviation: %.2f", g.mean, g.standardDeviation), ui.FontFace, txtop)
 }
 
 func (g *Game) Layout(outWidth, outHeight int) (int, int) {
@@ -65,6 +69,7 @@ func NewGame() *Game {
 		standardDeviation:   300,
 		splatterRadiusScale: 1,
 		meanSlider: &ui.Slider{
+			Label: "Mean",
 			X:     20,
 			Y:     200,
 			Width: 120,
@@ -74,6 +79,7 @@ func NewGame() *Game {
 			Color: color.Black,
 		},
 		standardDeviationSlider: &ui.Slider{
+			Label: "Standard Deviation",
 			X:     20,
 			Y:     220,
 			Width: 120,

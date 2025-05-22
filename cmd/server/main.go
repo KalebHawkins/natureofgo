@@ -14,13 +14,13 @@ func main() {
 	r.Handle("/static/*", http.StripPrefix("/static/", http.FileServer(http.Dir("web/static"))))
 
 	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
-		tmpl := web.Must(web.ParseTemplate(web.TemplateFS, "templates/index.tmpl"))
+		tmpl := web.Must(web.ParseTemplate(web.TemplateFS, "templates/index.gtpl"))
 
 		tmpl.Execute(w, data)
 	})
 
 	r.Get("/run", func(w http.ResponseWriter, r *http.Request) {
-		tmpl := web.Must(web.ParseTemplate(web.TemplateFS, "templates/wasm_runner.tmpl"))
+		tmpl := web.Must(web.ParseTemplate(web.TemplateFS, "templates/wasm_runner.gtpl"))
 
 		wasmFile := r.URL.Query().Get("wasm")
 		if wasmFile == "" {
