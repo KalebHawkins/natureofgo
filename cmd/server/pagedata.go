@@ -52,5 +52,10 @@ var data = PageData{
 			WasmFile:    "example0.5.wasm",
 			Description: "Visual representation of a custom distribution of random numbers.",
 		},
+		{
+			Title:       "An Accept Reject Distribution Walker",
+			WasmFile:    "exercise0.6.wasm",
+			Description: "Visual representation of a custom distribution of random numbers when applied to a walker.",
+		},
 	},
 }
