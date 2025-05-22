@@ -57,5 +57,15 @@ var data = PageData{
 			WasmFile:    "exercise0.6.wasm",
 			Description: "Visual representation of a custom distribution of random numbers when applied to a walker.",
 		},
+		{
+			Title:       "A Perlin Noise Walker",
+			WasmFile:    "example0.6.wasm",
+			Description: "This is a random walker using perlin noise as its step direction.",
+		},
+		{
+			Title:       "A Perlin Noise Walker (Perlin Step Size)",
+			WasmFile:    "exercise0.7.wasm",
+			Description: "This is a random walker using perlin noise as its step direction and step size.",
+		},
 	},
 }
